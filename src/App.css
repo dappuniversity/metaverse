@@ -1,38 +1,130 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Rubik:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html,
+body,
+#root {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  /* overflow: hidden; */
+  background: #272727;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  color: #E0F1FF;
+  font-family: "Rubik", -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, ubuntu, roboto, noto,
+    segoe ui, arial, sans-serif;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+canvas {
+  width: 100vw;
+  height: 100vh;
+}
+
+h1 {
+  margin: 0.75em auto 0;
+}
+
+nav {
+  background-color: rgba(32, 32, 46, 0.9);
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100vw;
+  height: 8vh;
+  padding: 0 1.50em;
+  z-index: 1;
+}
+
+.flex {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.flex-left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+a {
+  color: #E0F1FF;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.75em 1.75em;
+  margin: .5em 0;
+
+  background: #1D8482;
+  color: #E0F1FF;
+
+  border: none;
+  border-radius: .5em;
+
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 700;
+
+  cursor: pointer;
+  transition: all 500ms ease;
+}
+
+.button:hover {
+  background: #3586C6;
+  color: #E0F1FF;
+}
+
+.info {
+  position: absolute;
+	bottom: 0;
+	right: 0;
+  z-index: 1;
+
+	background-color: rgba(32, 32, 46, 0.9);
+
+	width: 500px;
+	height: 250px;
+
+  padding: 0.25em 2em;
+}
+
+.info--owner {
+  margin-left: 1.50em;
+}
+
+.info--buy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.50em auto;
+}
+
+/* IMAGE STYLES */
+.App-logo {
+  max-width: 30px;
+  height: auto;
+  margin: 0 10px;
 }
